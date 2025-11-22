@@ -64,9 +64,9 @@ body {
     box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
-    max-width: 600px;
+    max-width: 550px;
     width: 100%;
-    padding: 60px 40px;
+    padding: 40px 30px;
     position: relative;
     overflow: hidden;
     border: 5px solid #d4af37;
@@ -77,14 +77,25 @@ body {
 
 .card-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header-text {
+    text-align: left;
 }
 
 .santa-icon {
-    font-size: 5em;
-    margin-bottom: 20px;
+    font-size: 3.5em;
     animation: bounce 2s infinite;
     position: relative;
+    flex-shrink: 0;
 }
 
 @keyframes bounce {
@@ -98,34 +109,34 @@ body {
 
 .card-title {
     color: #c41e3a;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card-subtitle {
     color: #165b33;
-    font-size: 1.2em;
+    font-size: 1em;
     font-style: italic;
 }
 
 .divider {
-    width: 200px;
-    height: 4px;
+    width: 150px;
+    height: 3px;
     background: #d4af37;
-    margin: 30px auto;
+    margin: 20px auto;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .message-container {
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     background: #c41e3a;
     background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px);
     background-size: 25px 25px;
-    border-radius: 20px;
+    border-radius: 15px;
     border: 3px solid #d4af37;
 }
 
@@ -293,10 +304,10 @@ body {
 }
 
 .footer {
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: center;
     color: #999;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .ornament {
@@ -311,40 +322,52 @@ body {
     }
 
     .card {
-        padding: 30px 20px;
+        padding: 25px 15px;
+    }
+
+    .header-content {
+        gap: 15px;
     }
 
     .card-title {
-        font-size: 2em;
+        font-size: 1.5em;
+    }
+
+    .card-subtitle {
+        font-size: 0.9em;
     }
 
     .santa-icon {
-        font-size: 4em;
+        font-size: 2.5em;
     }
 
     .greeting {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .message-text {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .player-name {
-        font-size: 1.6em;
+        font-size: 1.4em;
     }
 
     .recipient-name {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .gift-box {
-        width: 250px;
-        height: 70px;
+        width: 220px;
+        height: 65px;
     }
 
     .recipient-container {
-        min-height: 90px;
+        min-height: 85px;
+    }
+
+    .message-container {
+        padding: 20px;
     }
 }
 

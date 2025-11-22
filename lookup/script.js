@@ -1,5 +1,5 @@
 function createSnowflakes() {
-    const snowflakeCount = 150; // Total number of snowflakes
+    const snowflakeCount = 50; // Total number of snowflakes
     const snowflakeChars = ['❄', '❅'];
     
     for (let i = 0; i < snowflakeCount; i++) {
