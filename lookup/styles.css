@@ -21,18 +21,20 @@ body {
     align-items: center;
     padding: 20px;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Snowflakes animation */
 .snowflake {
-    position: absolute;
+    position: fixed;
     top: -10px;
     color: white;
     opacity: 0.8;
     animation: fall linear infinite;
     user-select: none;
     z-index: 1;
+    pointer-events: none;
 }
 
 .snowflake-large {
@@ -300,5 +302,49 @@ body {
 .ornament {
     display: inline-block;
     margin: 0 5px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .card-title {
+        font-size: 2em;
+    }
+
+    .santa-icon {
+        font-size: 4em;
+    }
+
+    .greeting {
+        font-size: 1.3em;
+    }
+
+    .message-text {
+        font-size: 1.1em;
+    }
+
+    .player-name {
+        font-size: 1.6em;
+    }
+
+    .recipient-name {
+        font-size: 1.8em;
+    }
+
+    .gift-box {
+        width: 250px;
+        height: 70px;
+    }
+
+    .recipient-container {
+        min-height: 90px;
+    }
 }
 
