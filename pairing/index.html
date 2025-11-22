@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa Pairing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎅 Secret Santa Pairing</h1>
+
+        <!-- Participants Section -->
+        <div class="section">
+            <h2 class="section-title">1. Add Participants</h2>
+            <div class="input-group">
+                <input type="text" id="participantInput" placeholder="Enter participant name..." 
+                       onkeypress="if(event.key === 'Enter') addParticipant()">
+                <button onclick="addParticipant()">Add</button>
+            </div>
+            <div class="participants-list" id="participantsList">
+                <div class="empty-message">No participants yet. Add some names above!</div>
+            </div>
+        </div>
+
+        <!-- Exclusions Section -->
+        <div class="section">
+            <h2 class="section-title">2. Set Exclusions (Optional)</h2>
+            <div class="exclusions-grid" id="exclusionsList">
+                <div class="empty-message">Add at least 2 participants to set exclusions.</div>
+            </div>
+            <button onclick="addExclusion()" id="addExclusionBtn" style="display: none;">+ Add Exclusion</button>
+        </div>
+
+        <!-- Pairing Section -->
+        <div class="section">
+            <h2 class="section-title">3. Generate Pairings</h2>
+            <button class="btn-large" onclick="generatePairings()" id="pairBtn" disabled>
+                🎁 Generate Secret Santa Pairings
+            </button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results" id="results" style="display: none;">
+            <h2 class="section-title">Results</h2>
+            <div id="pairingsList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
